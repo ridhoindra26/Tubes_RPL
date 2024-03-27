@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\LoginController;
-
 use App\Models\Post;
 
 
@@ -25,3 +24,4 @@ Route::get('/', function () {
 Route::get('/', [LoginController::class, 'login'])->middleware('guest')->name('login');
 Route::post('/', [LoginController::class, 'getLogin']);
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/dashboard', [dashboardController::class, 'dashboard'])->middleware('auth')->name('dashboard');
