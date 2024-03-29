@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\LoginController;
 
+use App\Http\Controllers\Controller;
 use App\Models\Post;
 
 
@@ -18,10 +18,6 @@ use App\Models\Post;
 |
 */
 
-Route::get('/', function () {
-    return view('loginPage');
-});
 
-Route::get('/', [LoginController::class, 'login'])->middleware('guest')->name('login');
-Route::post('/', [LoginController::class, 'getLogin']);
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/', [Controller::class, 'index']);
+
