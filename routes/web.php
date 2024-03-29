@@ -33,3 +33,10 @@ Route::get('/lowongan/{id}', [LowonganController::class, 'lowongandetail'])->mid
 Route::post('/lowongan/addlowongan', [LowonganController::class, 'addlowongan'])->middleware('auth')->name('addlowongan');
 Route::post('/lowongan/editlowongan/{id}', [LowonganController::class, 'edit'])->middleware('auth');
 Route::get('/lowongan/delete/{id}', [LowonganController::class, 'deletelowongan'])->middleware('auth')->name('deletelowongan');
+
+Route::get('/artikel', [artikelController::class, 'artikel'])->middleware('auth')->name('artikel');
+Route::get('/artikel/add', [artikelController::class, 'editArtikel'])->middleware('auth');
+Route::get('/artikel/{id}', [artikelController::class, 'articledetail'])->middleware('auth');
+Route::post('/artikel/addArtikel', [artikelController::class, 'addArtikel'])->middleware('auth')->name('addArtikel');
+Route::post('/artikel/editArtikel/{id}', [artikelController::class, 'edit'])->middleware('auth');
+Route::get('/artikel/delete/{id}', [artikelController::class, 'deleteArtikel'])->middleware('auth')->name('deleteArtikel');
