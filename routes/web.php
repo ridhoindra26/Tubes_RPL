@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LowonganController;
 use App\Models\Post;
 
 
@@ -25,3 +26,10 @@ Route::get('/', [LoginController::class, 'login'])->middleware('guest')->name('l
 Route::post('/', [LoginController::class, 'getLogin']);
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/dashboard', [dashboardController::class, 'dashboard'])->middleware('auth')->name('dashboard');
+
+Route::get('/lowongan', [LowonganController::class, 'lowongan'])->middleware('auth')->name('lowongan');
+Route::get('/lowongan/add', [LowonganController::class, 'editlowongan'])->middleware('auth');
+Route::get('/lowongan/{id}', [LowonganController::class, 'lowongandetail'])->middleware('auth');
+Route::post('/lowongan/addlowongan', [LowonganController::class, 'addlowongan'])->middleware('auth')->name('addlowongan');
+Route::post('/lowongan/editlowongan/{id}', [LowonganController::class, 'edit'])->middleware('auth');
+Route::get('/lowongan/delete/{id}', [LowonganController::class, 'deletelowongan'])->middleware('auth')->name('deletelowongan');
