@@ -59,7 +59,7 @@
                     class="form-control"
                     id="exampleFormControlTextarea1"
                     rows="3"
-                    required>{{$detail->isi}}</textarea>
+                    required>{{$detail->deskripsi}}</textarea>
             </div>
             <div class="buttonGroup">
                 <a href="/lowongan" class="btn btn btn-outline-danger" role="button">
