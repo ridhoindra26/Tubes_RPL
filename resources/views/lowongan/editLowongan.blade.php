@@ -72,7 +72,7 @@
         @else
             
 
-            <form class="info" action="addlowongan" method="POST" enctype="multipart/form-data">
+            <form class="info" action="addLowongan" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <h4>Detail Informasi Lowongan</h4>
                 <div className="row align-items-center">
