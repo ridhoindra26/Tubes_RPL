@@ -73,6 +73,7 @@ class LowonganController extends Controller
 
     public function edit(Request $request, string $id)
     {
+        //dd($id);
         $validatedData = $request->validate([
             'judul' => 'required|max:255',
             'cabang_perusahaan' => 'required',

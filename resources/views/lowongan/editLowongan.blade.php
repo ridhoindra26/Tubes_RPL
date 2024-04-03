@@ -55,7 +55,7 @@
                     Isi Deskripsi<span class="req">*</span>
                 </label>
                 <textarea
-                    name="isi"
+                    name="deskripsi"
                     class="form-control"
                     id="exampleFormControlTextarea1"
                     rows="3"
@@ -121,7 +121,7 @@
                         Isi Deskripsi<span class="req">*</span>
                     </label>
                     <textarea
-                        name="isi"
+                        name="deskripsi"
                         class="form-control"
                         id="exampleFormControlTextarea1"
                         rows="3"
