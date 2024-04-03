@@ -59,7 +59,7 @@
                     class="form-control"
                     id="exampleFormControlTextarea1"
                     rows="3"
-                    required>{{$detail->isi}}</textarea>
+                    required>{{$detail->deskripsi}}</textarea>
             </div>
             <div class="buttonGroup">
                 <a href="/lowongan" class="btn btn btn-outline-danger" role="button">
@@ -72,7 +72,7 @@
         @else
             
 
-            <form class="info" action="addlowongan" method="POST" enctype="multipart/form-data">
+            <form class="info" action="addLowongan" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <h4>Detail Informasi Lowongan</h4>
                 <div className="row align-items-center">
