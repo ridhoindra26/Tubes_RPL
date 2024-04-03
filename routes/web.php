@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LowonganController;
+use App\Http\Controllers\artikelController;
 use App\Models\Post;
 
 
