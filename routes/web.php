@@ -20,4 +20,4 @@ use App\Models\Post;
 
 
 Route::get('/', [Controller::class, 'index']);
-
+Route::post('/reservasi', [Controller::class, 'addReservasi']);
