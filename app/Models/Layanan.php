@@ -15,4 +15,8 @@ class Layanan extends Model
      'foto',
      'created_at',
      'updated_at'];
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 256eceab8219120fbbcf2ec6a7fec2c679fec9d3
