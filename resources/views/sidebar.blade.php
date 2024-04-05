@@ -22,8 +22,8 @@
                 <ion-icon name="calendar-number"></ion-icon>
                 Reservasi
             </a>
-            <a href="/artikel" class="menu-col d-flex w-100 align-items-center gap-3 p-3
-                {{ Request::is('artikel') ? 'active' : '' }}">
+            <a href="/lowongan" class="menu-col d-flex w-100 align-items-center gap-3 p-3
+                {{ Request::is('lowongan') ? 'active' : '' }}">
                 <ion-icon name="document-text"></ion-icon>
                 Artikel
             </a>
