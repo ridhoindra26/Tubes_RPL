@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\ShowroomController;
 
+use App\Http\Controllers\Controller;
 use App\Models\Post;
 
 
@@ -18,6 +18,6 @@ use App\Models\Post;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [Controller::class, 'index']);
+Route::post('/reservasi', [Controller::class, 'addReservasi']);
