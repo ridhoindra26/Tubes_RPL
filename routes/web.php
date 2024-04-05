@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\lowonganController;
+use App\Http\Controllers\LayananController;
 use App\Models\Post;
 
 
@@ -33,3 +34,14 @@ Route::get('/lowongan/{id}', [lowonganController::class, 'lowongandetail'])->mid
 Route::post('/lowongan/addLowongan', [lowonganController::class, 'addLowongan'])->middleware('auth')->name('addLowongan');
 Route::post('/lowongan/editLowongan/{id}', [lowonganController::class, 'edit'])->middleware('auth');
 Route::get('/lowongan/delete/{id}', [lowonganController::class, 'deletelowongan'])->middleware('auth')->name('deletelowongan');
+
+Route::get('/layanan', [LayananController::class,'layanan']);
+Route::get('/layanan/info', [LayananController::class, 'infoLayanan']);
+Route::get('/layanan/deskripsi', [LayananController::class, 'descLayanan']);
+Route::get('/layanan/additional', [LayananController::class, 'additional']);
+Route::get('/layanan/review', [LayananController::class, 'review']);
+Route::get('/layanan/qna', [LayananController::class, 'qna']);
+Route::post('/layanan/add', [LayananController::class, 'addLayanan']);
+Route::get('/layanan/delete/{id}', [LayananController::class, 'deleteLayanan']);
+Route::get('/layanan/{id}', [LayananController::class, 'layanandetail']);
+Route::post('/layanan/editLayanan/{id}', [LayananController::class, 'edit']);
