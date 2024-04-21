@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ServiceController;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;
@@ -17,7 +17,7 @@ use App\Models\Post;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-
+Route::get('/service', [ServiceController::class, 'index']);
+Route::get('/servicedetail/{id}', [ServiceController::class, 'serviceDetail']);
 Route::get('/', [Controller::class, 'index']);
 Route::post('/reservasi', [Controller::class, 'addReservasi']);
