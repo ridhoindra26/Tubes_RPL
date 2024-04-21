@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset ('css/lowongan/lowongan.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/lowongan/editLowongan.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/artikel/artikel.css') }}">
-    <link rel="stylesheet" href="{{ asset ('css/artikel/editLowongan.css') }}">
+    <link rel="stylesheet" href="{{ asset ('css/artikel/editArtikel.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/layanan/layanan.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/layanan/editLayanan.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/dashboard/dashboard.css') }}">
@@ -48,7 +48,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    
+
     <style>
         .base {
             background-color: #F4F7FE;
@@ -58,18 +58,18 @@
 </head>
 
 <body class="base hold-transition sidebar-mini layout-fixed">
-<!--
+
     <div class="preloader flex-column justify-content-center align-items-center">
         <img class="animation__wobble" src="/img/Vector.png" alt="BayuLogo" height="60" width="60">
     </div>
--->
+
     <div class="bebas">
         @include('header')
         @include('sidebar')
         @yield('content')
     </div>
 
-    
+
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
