@@ -72,5 +72,32 @@
     </div>
   </section>
   <!-- End : Part -->
+  <!-- Reservasi -->
+  <div class="reservasi bg-blacker">
+    <div class="container">
+      <div class="reservasi-wrapper bg-purple">
+        <div class="row">
+          <div class="col-xl-5">
+            <div class="reservasi-cta">
+              <div class="title">
+                <h5 class="font-jakarta">Konsultasikan & Reservasi</h5>
+                <p class="font-jakarta">Hubungi admin kami untuk melakukan konsultasi sebelum melakukan reservasi
+                  layanan kami!</p>
+              </div>
+              <div class="button">
+                <button><a href="https://wa.me/6282257423118?text=Halo,%20saya%20ingin%20konsultasi%20&%20reservasi%20service%20smartphone" class="text-decoration-none text-dark">Hubungi Kami</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-7">
+            <div class="reservasi-image">
+              <img src="{{ url('images/mmockup.png') }}" alt="mmockup">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End : reservasi -->
 </main>
 @endsection
