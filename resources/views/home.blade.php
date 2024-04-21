@@ -7,7 +7,7 @@
     @if (Session::has('message'))
   <div class="alert alert-success alert-dismissible">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <strong>Success!</strong> Indicates a successful or positive action.
+    <strong>Success!</strong> Reservasi kamu berhasil terkirim.
   </div>
 
 
