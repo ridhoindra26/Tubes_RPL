@@ -72,9 +72,9 @@ class LayananController extends Controller
             $filename= date('YmdHi').$file->getClientOriginalName()[0];
             // Storage::disk('public')->url($filename);
             // Storage::putFile('photos', new File('admin.bayutirta.masuk.id/public/Image'), $filename);
-            $file->storeAs('layanan', $filename, 'public');
+            // $file->storeAs('layanan', $filename, 'public'); ini buat hosting
             // $file->move('admin.bayutirta.masuk.id/public/Image' , $filename);
-            // $file-> move(public_path(), $filename);
+            $file->move(public_path('images/layanan'), $filename);
             // $request['foto']= $filename;
         }else{
             $filename = 'tidak ada';
@@ -117,9 +117,9 @@ class LayananController extends Controller
             $filename= date('YmdHi').$file->getClientOriginalName()[0];
             // Storage::disk('public')->url($filename);
             // Storage::putFile('photos', new File('admin.bayutirta.masuk.id/public/Image'), $filename);
-            $file->storeAs('layanan', $filename, 'public');
+            // $file->storeAs('layanan', $filename, 'public'); buat hosting
             // $file->move('admin.bayutirta.masuk.id/public/Image' , $filename);
-            // $file-> move(public_path(), $filename);
+            $file->move(public_path('images/layanan'), $filename);
             // $request['foto']= $filename;
             Layanan::where('id_layanan', '=', $id)->update([
                 'foto' => $filename
