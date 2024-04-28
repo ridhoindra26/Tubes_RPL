@@ -20,14 +20,7 @@ class Controller extends BaseController
 {
     public function index()
     {
-        $artikel = Artikel::all()->take(3);
-        // $ulasan = Ulasan::all();
-        $response = file_get_contents('https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ-4NA1pSdeC4R5ik3KRItaq8&key=AIzaSyBGr_Mzjw025m1jTs-YnbWMXVNeQ1WgCjw');
-        $response = json_decode($response);
-        // $getUlasan = new UlasanController;
-        // $ulasan = $getUlasan->getUlasan();
-        // dd($response->result->reviews);
-        $layanans = Layanan::where('status', '=', 1)->take(3)->get();
+
         $layanan = Layanan::where('status', '=', 1)->get();
         // return response()->json([
         //             'layanan' => $layanans,
@@ -90,7 +83,7 @@ class Controller extends BaseController
         // return redirect('/',[
         //     'message' => 'Data Berhasil Dikirim!',
         // ]); // Return the new post as JSON
-        return redirect()->to('/')->with('message', 'Data Berhasil Dikirim!');
+        return redirect();
 
     }
 }
