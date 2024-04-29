@@ -48,9 +48,9 @@ class artikelController extends Controller
             $filename= date('YmdHi').$file->getClientOriginalName()[0];
             // Storage::disk('public')->url($filename);
             // Storage::putFile('photos', new File('admin.bayutirta.masuk.id/public/Image'), $filename);
-            $file->storeAs('artikel', $filename, 'public');
+            //$file->storeAs('artikel', $filename, 'public');
             // $file->move('admin.bayutirta.masuk.id/public/Image' , $filename);
-            // $file-> move(public_path(), $filename);
+            $file-> move(public_path(), $filename);
             // $request['foto']= $filename;
             $post = new Artikel([
             'judul' => $validatedData['judul'],
