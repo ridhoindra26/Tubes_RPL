@@ -12,24 +12,39 @@ class dashboardController extends Controller
     //
     public function dashboard()
     {
-        $belum_dikonfirmasi = Reservasi::where('status','=','Belum Dikonfirmasi')->count();
-        // $ditolak = Reservasi::where('status','=','pending')->count();
-        $diterima = Reservasi::where('status','=','Diterima')->count();
-        $total = Reservasi::all()->count();
-        $reservasi = Reservasi::orderBy('created_at', 'DESC')->take(5)->get();
-        $chart = Reservasi::selectRaw('id_layanan, count(id_reservasi) as total')->groupBy('id_layanan')->get();
-        // dd($chart);
-        $total_layanan = array();
-        foreach ($chart as $x) {
-            $layanan = Layanan::where('id_layanan','=',$x->id_layanan)->first();
-            $nama_layanan[]=$layanan->nama_layanan;
-            $total_layanan[]=$x->total;
-        }
-        // dd($chart);
-        foreach ($reservasi as $item) {
-            $layanan = Layanan::where('id_layanan','=',$item->id_layanan)->first();
-            $item['nama_layanan']=$layanan->nama_layanan;
-        }
+        $belum_dikonfirmasi = 1;
+        $diterima = 1;
+        $total = 2;
+        $reservasi = [
+            [
+                'id_reservasi' => 1,
+                'name' => 'name_pelanggan',
+                'no_telp' => 'no_telp_pelanggan',
+                'alamat' => 'alamat_pelanggan',
+                'merk_hp' => 'merk_hp_pelanggan',
+                'keterangan' => 'keterangan_pelanggan',
+                'nama_layanan' => 'layanan_1',
+                'status' => 'Belum Dikonfirmasi',
+                'created_at' => '2024-04-28 12:56:16',
+                'updated_at' => '2024-04-29 12:56:16',
+            ],
+            [
+                'id_reservasi' => 2,
+                'name' => 'name_pelanggan',
+                'no_telp' => 'no_telp_pelanggan',
+                'alamat' => 'alamat_pelanggan',
+                'merk_hp' => 'merk_hp_pelanggan',
+                'keterangan' => 'keterangan_pelanggan',
+                'nama_layanan' => 'layanan_2',
+                'status' => 'Diterima',
+                'created_at' => '2024-04-28 12:56:16',
+                'updated_at' => '2024-04-29 12:56:16',
+            ]
+        ];
+        $reservasi = json_decode(json_encode($reservasi));
+        $nama_layanan = ['layanan1','layanan2'];
+        $total_layanan=[1,1];
+        
         return view("dashboard.dashboard",[
             'belum_dikonfirmasi'=>$belum_dikonfirmasi,
             'diterima'=>$diterima,
@@ -39,5 +54,4 @@ class dashboardController extends Controller
             'total_layanan'=>$total_layanan
         ]);
     }
-    
 }
