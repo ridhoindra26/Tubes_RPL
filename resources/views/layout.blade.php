@@ -34,6 +34,9 @@
             <a class="nav-link" aria-current="page" href="{{ url('/service') }}">Layanan</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{ url('/katalogview') }}">Katalog</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/#working">Cara Kerja</a>
           </li>
           <li class="nav-item">
