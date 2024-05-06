@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ asset ('css/dashboard/sidebar.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/lowongan/lowongan.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/lowongan/editLowongan.css') }}">
+    <link rel="stylesheet" href="{{ asset ('css/penjualan/penjualan.css') }}">
+    <link rel="stylesheet" href="{{ asset ('css/penjualan/editPenjualan.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/artikel/artikel.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/artikel/editArtikel.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/layanan/layanan.css') }}">

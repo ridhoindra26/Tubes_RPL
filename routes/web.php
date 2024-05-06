@@ -57,6 +57,6 @@ Route::get('/artikel/delete/{id}', [artikelController::class, 'deleteArtikel'])-
 Route::get('/penjualan', [PenjualanController::class, 'penjualan'])->middleware('auth')->name('penjualan');
 Route::get('/penjualan/add', [PenjualanController::class, 'editPenjualan'])->middleware('auth');
 Route::get('/penjualan/{id}', [PenjualanController::class, 'penjualanDetail'])->middleware('auth');
-Route::post('/penjualan/addPenjualan', [PenjualanController::class, 'addPenjualan'])->middleware('auth')->name('addPenjualan');
-Route::post('/penjualan/editPenjualan/{id}', [PenjualanController::class, 'edit'])->middleware('auth');
+Route::post('/penjualan/addpenjualan', [PenjualanController::class, 'addPenjualan'])->middleware('auth')->name('addPenjualan');
+Route::post('/penjualan/editpenjualan/{id}', [PenjualanController::class, 'edit'])->middleware('auth');
 Route::get('/penjualan/delete/{id}', [PenjualanController::class, 'deletePenjualan'])->middleware('auth')->name('deletePenjualan');
