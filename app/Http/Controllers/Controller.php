@@ -51,7 +51,7 @@ class Controller extends BaseController
             $file= $request->file('foto');
             $filename= date('YmdHi').$file->getClientOriginalName()[0];
             $file->storeAs('reservasi', $filename, 'public');
-
+            $file->move(public_path('images/layanan'), $filename);
             $post = new Reservasi([
                 'id_layanan' => $id_layanan->id_layanan,
                 'name' => $validatedData['name'],
