@@ -50,8 +50,7 @@ class Controller extends BaseController
         if (isset($_FILES["foto"]) && !empty($_FILES["foto"]["name"])) {
             $file= $request->file('foto');
             $filename= date('YmdHi').$file->getClientOriginalName()[0];
-            $file->storeAs('reservasi', $filename, 'public');
-            $file->move(public_path('images/layanan'), $filename);
+            $file->move(public_path('images/reservasi'), $filename);
             $post = new Reservasi([
                 'id_layanan' => $id_layanan->id_layanan,
                 'name' => $validatedData['name'],
@@ -83,7 +82,7 @@ class Controller extends BaseController
         // return redirect('/',[
         //     'message' => 'Data Berhasil Dikirim!',
         // ]); // Return the new post as JSON
-        return redirect();
+        return redirect()->back()->with('message', 'Reservasi kamu berhasil terkirim.');
 
     }
 }
