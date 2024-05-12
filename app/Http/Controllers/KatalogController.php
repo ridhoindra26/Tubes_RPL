@@ -11,7 +11,9 @@ class KatalogController extends Controller
 {
     public function index()
     {
-        return view('katalogview');
+        $katalogs = Katalog::where('status', '=', 1)->get();
+        return view('Katalogview',[
+            'katalog' => $katalogs]);
     }
 
     public function servicedetail(string $id)
