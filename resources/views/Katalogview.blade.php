@@ -27,8 +27,8 @@
     <div class="container">
       <div class="row">
         
-          @if (isset($layanan))
-            @foreach ($layanan as $item)
+          @if (isset($katalog))
+            @foreach ($katalog as $item)
             <div class="col-xl-4">
                   <a href="{{ url("/servicedetail/$item->id_layanan") }}" class="text-decoration-none">
                     <div class="part-card">
@@ -36,8 +36,8 @@
                         <img src="{{ url("https://admin.bayutirta.masuk.id/public/layanan/$item->foto") }}" onerror="this.src='images/service2.png'" alt="images/service2.png">
                       </div>
                       <div class="body">
-                        <h5 class="title font-jakarta">{{$item->nama_layanan}}</h5>
-                        <p class="text">{{$item->keterangan}}</p>
+                        <h5 class="title font-jakarta">{{$item->judul}}</h5>
+                        <p class="text">{{$item->deskripsi}}</p>
                       </div>
                       <div class="logo">
                         <div class="brand">

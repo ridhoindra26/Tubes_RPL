@@ -11,7 +11,7 @@ class KatalogController extends Controller
 {
     public function index()
     {
-        $katalogs = Katalog::where('status', '=', 1)->get();
+        $katalogs = Katalog::all();
         return view('Katalogview',[
             'katalog' => $katalogs]);
     }
