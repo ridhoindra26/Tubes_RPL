@@ -10,7 +10,7 @@
       <div class="row align-items-lg-center">
         <div class="col-xl-5">
           <div class="service-detail-image">
-            <img src="{{ url("https://admin.bayutirta.masuk.id/public/layanan/$detail->foto") }}" onerror="this.src='https://admin.bayutirta.masuk.id/public/images/service2.png'" alt="images/service2.png">
+            <img src="images/layanan/{{$detail->foto}}" onerror="this.src='{{ url('images/service2.png') }}'" alt="images/service2.png">
           </div>
         </div>
         <div class="col-xl-5">
@@ -47,7 +47,9 @@
               </div>
               <p>4.5/5</p>
             </div>
-            <div class="price font-jakarta">{{$detail->harga_terendah}} - {{$detail->harga_tertinggi}}<span class="discount">-40%</span></div>
+            <div class="price font-jakarta">{{$detail->harga_terendah}} - {{$detail->harga_tertinggi}}
+              {{-- <span class="discount">-40%</span> --}}
+            </div>
             <div class="list">
               <p>Layanan perbaikan ganti baterai </p>
               <ul>

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\KatalogController;
+use App\Http\Controllers\ArticleController;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;
@@ -21,3 +23,8 @@ Route::get('/service', [ServiceController::class, 'index']);
 Route::get('/servicedetail/{id}', [ServiceController::class, 'serviceDetail']);
 Route::get('/', [Controller::class, 'index']);
 Route::post('/reservasi', [Controller::class, 'addReservasi']);
+Route::get('/katalogview', [KatalogController::class, 'index']);
+Route::get('/article', [ArticleController::class, 'index']);
+Route::get('/articledetail/{id}', [ArticleController::class, 'articleDetail']);
+Route::get('/articledetail/suka/{id}', [ArticleController::class, 'articleSuka']);
+Route::post('/articledetail/komentar/{id}', [ArticleController::class, 'articleKomentar']);
