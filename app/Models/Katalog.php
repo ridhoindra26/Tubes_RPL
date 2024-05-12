@@ -11,6 +11,7 @@ class Penjualan extends Model
 
     protected $fillable = [
         'judul',
+        'kategori',
         'harga',
         'stok',
         'deskripsi',
