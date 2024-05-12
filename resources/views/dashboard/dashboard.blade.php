@@ -254,8 +254,8 @@
                                 <div class="container-fluid info">
                                     <div class="row">
                                         <div class="col">
-                                            <h5>Pemohon</h5>
-                                            <p id="pemohon">{{$item->name}}</p>
+                                            <h5>Nama Pelanggan</h5>
+                                            <p id="Nama Pelanggan">{{$item->name}}</p>
                                         </div>
                                         <div class="col">
                                             <h5>Waktu Permohonan</h5>
@@ -264,7 +264,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col">
-                                            <h5>Tipe Layanan</h5>
+                                            <h5>Nama Layanan</h5>
                                             {{$item->nama_layanan}}
                                         </div>
                                         <div class="col">
@@ -336,7 +336,7 @@
   <div class="container-fluid info">
       <div class="row">
           <div class="col">
-              <h5>Pemohon</h5>
+              <h5>Nama Pelanggan</h5>
               {{$item->name}}
           </div>
           <div class="col">
@@ -346,7 +346,7 @@
       </div>
       <div class="row">
           <div class="col">
-              <h5>Tipe Layanan</h5>
+              <h5>Nama Layanan</h5>
               {{$item->nama_layanan}}
           </div>
           <div class="col">
@@ -384,7 +384,7 @@
   <div class="container-fluid info">
       <div class="row">
           <div class="col">
-              <h5>Pemohon</h5>
+              <h5>Nama Pelanggan</h5>
               {{$item->name}}
           </div>
           <div class="col">
@@ -394,7 +394,7 @@
       </div>
       <div class="row">
           <div class="col">
-              <h5>Tipe Layanan</h5>
+              <h5>Nama Layanan</h5>
               {{$item->nama_layanan}}
           </div>
           <div class="col">
