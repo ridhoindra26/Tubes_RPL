@@ -7,7 +7,7 @@ use App\Http\Controllers\LowonganController;
 use App\Http\Controllers\artikelController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\UlasanController;
-use App\Models\Post;
+use App\Http\Controllers\PenjualanController;
 
 
 /*
@@ -30,12 +30,12 @@ Route::post('/', [LoginController::class, 'getLogin']);
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/dashboard', [dashboardController::class, 'dashboard'])->middleware('auth')->name('dashboard');
 
-Route::get('/lowongan', [lowonganController::class, 'lowongan'])->middleware('auth')->name('lowongan');
-Route::get('/lowongan/add', [lowonganController::class, 'editlowongan'])->middleware('auth');
-Route::get('/lowongan/{id}', [lowonganController::class, 'lowongandetail'])->middleware('auth');
-Route::post('/lowongan/addLowongan', [lowonganController::class, 'addLowongan'])->middleware('auth')->name('addLowongan');
-Route::post('/lowongan/editLowongan/{id}', [lowonganController::class, 'edit'])->middleware('auth');
-Route::get('/lowongan/delete/{id}', [lowonganController::class, 'deletelowongan'])->middleware('auth')->name('deletelowongan');
+Route::get('/lowongan', [LowonganController::class, 'lowongan'])->middleware('auth')->name('lowongan');
+Route::get('/lowongan/add', [LowonganController::class, 'editlowongan'])->middleware('auth');
+Route::get('/lowongan/{id}', [LowonganController::class, 'lowongandetail'])->middleware('auth');
+Route::post('/lowongan/addLowongan', [LowonganController::class, 'addLowongan'])->middleware('auth')->name('addLowongan');
+Route::post('/lowongan/editLowongan/{id}', [LowonganController::class, 'edit'])->middleware('auth');
+Route::get('/lowongan/delete/{id}', [LowonganController::class, 'deletelowongan'])->middleware('auth')->name('deletelowongan');
 
 Route::get('/layanan', [LayananController::class,'layanan']);
 Route::get('/layanan/info', [LayananController::class, 'infoLayanan']);
@@ -56,3 +56,10 @@ Route::post('/artikel/editArtikel/{id}', [artikelController::class, 'edit'])->mi
 Route::get('/artikel/delete/{id}', [artikelController::class, 'deleteArtikel'])->middleware('auth')->name('deleteArtikel');
 
 Route::get('/ulasan', [UlasanController::class, 'ulasan'])->middleware('auth');
+
+Route::get('/penjualan', [PenjualanController::class, 'penjualan'])->middleware('auth')->name('penjualan');
+Route::get('/penjualan/add', [PenjualanController::class, 'editPenjualan'])->middleware('auth');
+Route::get('/penjualan/{id}', [PenjualanController::class, 'penjualanDetail'])->middleware('auth');
+Route::post('/penjualan/addpenjualan', [PenjualanController::class, 'addPenjualan'])->middleware('auth')->name('addPenjualan');
+Route::post('/penjualan/editpenjualan/{id}', [PenjualanController::class, 'edit'])->middleware('auth');
+Route::get('/penjualan/delete/{id}', [PenjualanController::class, 'deletePenjualan'])->middleware('auth')->name('deletePenjualan');

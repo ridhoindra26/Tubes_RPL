@@ -8,17 +8,11 @@
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="{{ asset ('app.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/dashboard/sidebar.css') }}">
-    <link rel="stylesheet" href="{{ asset ('css/lowongan/lowongan.css') }}">
-    <link rel="stylesheet" href="{{ asset ('css/lowongan/editLowongan.css') }}">
-    <link rel="stylesheet" href="{{ asset ('css/penjualan/penjualan.css') }}">
-    <link rel="stylesheet" href="{{ asset ('css/penjualan/editPenjualan.css') }}">
-    <link rel="stylesheet" href="{{ asset ('css/artikel/artikel.css') }}">
-    <link rel="stylesheet" href="{{ asset ('css/artikel/editArtikel.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/layanan/layanan.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/layanan/editLayanan.css') }}">
-    <link rel="stylesheet" href="{{ asset ('css/dashboard/dashboard.css') }}">
-    <link rel="stylesheet" href="{{ asset ('css/reservasi/reservasi.css') }}">
-    <link rel="stylesheet" href="{{ asset ('css/ulasan/ulasan.css') }}">
+    <link rel="stylesheet" href="{{ asset ('css/layanan/sidebarLayanan.css') }}">
+    <link rel="stylesheet" href="{{ asset ('css/layanan/infolayanan.css') }}">
+    <link rel="stylesheet" href="{{ asset ('css/layanan/qna.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +24,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Display%3A700" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans%3A500%2C700" />
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset ('lte/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
@@ -44,7 +39,8 @@
     <link rel="stylesheet" href="{{ asset ('lte/plugins/simplemde/simplemde.min.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -60,18 +56,16 @@
 </head>
 
 <body class="base hold-transition sidebar-mini layout-fixed">
-
-    <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__wobble" src="/img/Vector.png" alt="BayuLogo" height="60" width="60">
-    </div>
-
     <div class="bebas">
         @include('header')
         @include('sidebar')
+        {{-- <div class="sidelayanan">
+            @include('sidebarLayanan')
+        </div> --}}
+        
         @yield('content')
+        
     </div>
-
-
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
