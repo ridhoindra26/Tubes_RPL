@@ -12,15 +12,16 @@ class KatalogController extends Controller
     public function index()
     {
         $katalogs = Katalog::all();
-        return view('Katalogview',[
-            'katalog' => $katalogs]);
+        return view('Katalogview', [
+            'katalog' => $katalogs
+        ]);
     }
 
-    public function servicedetail(string $id)
+    public function katalogdetail(string $id)
     {
-        $detail = Katalog::where('id_layanan', '=', $id)->first();
-        return view('servicedetail',[
-            'detail'=>$detail
+        $detail = Katalog::where('id_penjualan', '=', $id)->first();
+        return view('katalogdetail', [
+            'detail' => $detail
         ]);
     }
 }
