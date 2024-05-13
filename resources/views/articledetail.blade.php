@@ -77,7 +77,9 @@
                   <p>"{{$item->komentar}}"</p>
                 </div>
                 <div class="review-date">
-                  <p>{{$item->created_at->format('d-m-Y')}}</p>
+                  {{-- <p>{{$item->created_at->format('d-m-Y')}}</p> --}}
+                  <p>{{ $item->created_at->diffForHumans() }}</p>
+
                 </div>
                 @endforeach
                 @else
