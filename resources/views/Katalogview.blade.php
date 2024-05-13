@@ -26,31 +26,35 @@
   <section class="part">
     <div class="container">
       <div class="row">
-        
-          @if (isset($layanan))
-            @foreach ($layanan as $item)
+          @if (isset($katalog))
+            @foreach ($katalog as $item)
             <div class="col-xl-4">
-                  <a href="{{ url("/servicedetail/$item->id_layanan") }}" class="text-decoration-none">
+                  <a href="{{ url("/katalogdetail/$item->id_penjualan") }}" class="text-decoration-none">
                     <div class="part-card">
                       <div class="image">
-                        <img src="{{ url("https://admin.bayutirta.masuk.id/public/layanan/$item->foto") }}" onerror="this.src='images/service2.png'" alt="images/service2.png">
+                        <img src="images/katalog/{{$item->foto}}" onerror="this.src='images/service2.png'" alt="images/service2.png">
                       </div>
                       <div class="body">
-                        <h5 class="title font-jakarta">{{$item->nama_layanan}}</h5>
-                        <p class="text">{{$item->keterangan}}</p>
-                      </div>
+                        <h5 class="title font-jakarta">{{$item->judul}}</h5>
+                        <p class="text">{{$item->deskripsi}}</p>
                       <div class="logo">
-                        <div class="brand">
-                          <img src="{{ url('images/xiaomi.png') }}" alt="brand">
-                        </div>
-                        <div class="brand">
-                          <img src="{{ url('images/samsung.png') }}" alt="brand">
-                        </div>
-                        <div class="brand">
-                          <img src="{{ url('images/oppo.png') }}" alt="brand">
-                        </div>
-                        <div class="brand">
-                          <img src="{{ url('images/vivo.png') }}" alt="brand">
+                            @if ($item->Kategori == 'xiaomi')
+                                <div class="brand">
+                                    <img src="{{ url('images/xiaomi.png') }}" alt="brand">
+                                </div>
+                            @elseif ($item->Kategori == 'samsung')
+                                <div class="brand">
+                                    <img src="{{ url('images/samsung.png') }}" alt="brand">
+                                </div>
+                            @elseif ($item->Kategori == 'oppo')
+                                <div class="brand">
+                                    <img src="{{ url('images/oppo.png') }}" alt="brand">
+                                </div>
+                            @elseif ($item->Kategori == 'vivo')
+                                <div class="brand">
+                                    <img src="{{ url('images/vivo.png') }}" alt="brand">
+                                </div>
+                            @endif
                         </div>
                       </div>
                     </div>
