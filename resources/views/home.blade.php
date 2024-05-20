@@ -121,6 +121,13 @@
     </div>
   </section>
   <!-- End : Service -->
+  <!-- Status Service -->
+  <form action=>
+    <input type="text" name="query" placeholder="Search...">
+    <button type="submit">Search</button>
+</form>
+
+  <!-- End : Status Service -->
 
   <!-- Question -->
   <div class="question" id="question">
