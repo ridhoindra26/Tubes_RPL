@@ -9,9 +9,6 @@
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <strong>Success!</strong> {!! \Session::get('message') !!}
   </div>
-
-
-
   @endif
   <!-- Hero -->
   <section class="hero">
@@ -99,7 +96,7 @@
                           d="M16.0001 13.3333C16.7365 13.3333 17.3334 12.7363 17.3334 12C17.3334 11.2636 16.7365 10.6666 16.0001 10.6666C15.2637 10.6666 14.6667 11.2636 14.6667 12C14.6667 12.7363 15.2637 13.3333 16.0001 13.3333ZM16.0001 16C18.2092 16 20.0001 14.2091 20.0001 12C20.0001 9.79082 18.2092 7.99996 16.0001 7.99996C13.7909 7.99996 12.0001 9.79082 12.0001 12C12.0001 14.2091 13.7909 16 16.0001 16Z"
                           fill="#D8DCDF" />
                       </svg>
-                      <a href="https://maps.app.goo.gl/i394faRGP1Db1d6Q7">Google Maps</a>
+                      <a href="#mapsModal" data-toggle="modal" data-target="#mapsModal">Google Maps</a>
                     </span>
                   </div>
                 </div>
@@ -281,4 +278,23 @@
   <!-- End : consultation -->
 </main>
 
+<!-- Modal HTML -->
+<div class="modal fade" id="mapsModal" tabindex="-1" role="dialog" aria-labelledby="mapsModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="mapsModalLabel">Geotagging Link</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=+(BAYU%20TIRTA%20CELL%20%7C%20Service%20HP%20%7C%20Jual%20Beli%20HP)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">Bayu Tirta Cell</a></iframe></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection
