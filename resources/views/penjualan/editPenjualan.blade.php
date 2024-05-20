@@ -40,6 +40,18 @@
             </div>
             <div className="row align-items-center">
                 <label for="formFile" class="form-label">
+                    Kategori<span class="req">*</span>
+                </label>
+                <input
+                    name="kategori"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="Kategori (Merk Perusahaan)"
+                    value="{{$detail->kategori}}"
+                    required>
+            </div>
+            <div className="row align-items-center">
+                <label for="formFile" class="form-label">
                     Stok<span class="req">*</span>
                 </label>
                 <input
@@ -102,6 +114,17 @@
                         class="form-control"
                         id="exampleFormControlInput1"
                         placeholder="Tulis Harga"
+                        required>
+                </div>
+                <div className="row align-items-center">
+                    <label for="formFile" class="form-label">
+                        Kategori<span class="req">*</span>
+                    </label>
+                    <input
+                        name="kategori"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="Kategori (Merk Perusahaan)"
                         required>
                 </div>
                 <div className="row align-items-center">

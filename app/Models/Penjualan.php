@@ -9,6 +9,7 @@ class Penjualan extends Model
 {
     protected $fillable = [
         'judul',
+        'Kategori',
         'harga',
         'stok',
         'deskripsi',

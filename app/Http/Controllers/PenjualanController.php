@@ -38,6 +38,7 @@ class PenjualanController extends Controller
         $validatedData = $request->validate([
             'judul' => 'required|max:255',
             'harga' => 'required',
+            'kategori' => 'required',
             'stok' => 'required',
             'deskripsi' => 'required'
         ]);
@@ -49,6 +50,7 @@ class PenjualanController extends Controller
             $post = new Penjualan([
                 'judul' => $validatedData['judul'],
                 'harga' => $validatedData['harga'],
+                'Kategori' => $validatedData['kategori'],
                 'stok' => $validatedData['stok'],
                 'deskripsi' => $validatedData['deskripsi'],
                 'foto' => $filename,
@@ -58,6 +60,7 @@ class PenjualanController extends Controller
             $post = new Penjualan([
                 'judul' => $validatedData['judul'],
                 'harga' => $validatedData['harga'],
+                'Kategori' => $validatedData['kategori'],
                 'stok' => $validatedData['stok'],
                 'deskripsi' => $validatedData['deskripsi'],
                 'foto' =>'kodak ultramax.jpg',
@@ -75,6 +78,7 @@ class PenjualanController extends Controller
         $validatedData = $request->validate([
             'judul' => 'required|max:255',
             'harga' => 'required',
+            'kategori' => 'required',
             'stok' => 'required',
             'deskripsi' => 'required'
         ]);
@@ -91,6 +95,7 @@ class PenjualanController extends Controller
         Penjualan::where('id_penjualan', '=', $id)->update([
             'judul' => $validatedData['judul'],
             'harga' => $validatedData['harga'],
+            'Kategori' => $validatedData['kategori'],
             'stok' => $validatedData['stok'],
             'deskripsi' => $validatedData['deskripsi'],
             'updated_at' => now()
