@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LowonganController;
 use App\Http\Controllers\artikelController;
 use App\Http\Controllers\LayananController;
+use App\Http\Controllers\UlasanController;
 use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\ReservasiController;
 
@@ -57,6 +58,8 @@ Route::get('/artikel/{id}', [artikelController::class, 'articledetail'])->middle
 Route::post('/artikel/addArtikel', [artikelController::class, 'addArtikel'])->middleware('auth')->name('addArtikel');
 Route::post('/artikel/editArtikel/{id}', [artikelController::class, 'edit'])->middleware('auth');
 Route::get('/artikel/delete/{id}', [artikelController::class, 'deleteArtikel'])->middleware('auth')->name('deleteArtikel');
+
+Route::get('/ulasan', [UlasanController::class, 'ulasan'])->middleware('auth');
 
 Route::get('/penjualan', [PenjualanController::class, 'penjualan'])->middleware('auth')->name('penjualan');
 Route::get('/penjualan/add', [PenjualanController::class, 'editPenjualan'])->middleware('auth');
