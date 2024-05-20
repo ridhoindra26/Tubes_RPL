@@ -7,6 +7,7 @@ use App\Http\Controllers\LowonganController;
 use App\Http\Controllers\artikelController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\PenjualanController;
+use App\Http\Controllers\ReservasiController;
 
 
 /*
@@ -28,6 +29,9 @@ Route::get('/', [LoginController::class, 'login'])->middleware('guest')->name('l
 Route::post('/', [LoginController::class, 'getLogin']);
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/dashboard', [dashboardController::class, 'dashboard'])->middleware('auth')->name('dashboard');
+Route::get('/reservasi', [ReservasiController::class,'reservasi'])->middleware('auth');
+Route::get('/reservasi/{id}/{status}', [ReservasiController::class,'updateReservasi'])->middleware('auth');
+
 
 Route::get('/lowongan', [LowonganController::class, 'lowongan'])->middleware('auth')->name('lowongan');
 Route::get('/lowongan/add', [LowonganController::class, 'editlowongan'])->middleware('auth');
