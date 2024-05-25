@@ -85,4 +85,16 @@ class Controller extends BaseController
         return redirect()->back()->with('message', 'Reservasi kamu berhasil terkirim.');
 
     }
+
+    
+    public function results(Request $request)
+
+    {
+
+        $query = $request->input('query');
+
+
+        return view('search.results', ['query' => $query]);
+
+    }
 }
