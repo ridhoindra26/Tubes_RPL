@@ -53,7 +53,7 @@
             <div class="list">
               <p>Layanan perbaikan ganti baterai </p>
               <ul>
-                <li>Baterai baru dengan jaminan kualitas terbaik 100% original</li>
+                <li>Baterai baru dengan jaminan mutu terunggul dan keaslian yang terjamin 100%</li>
                 <li>Proses perbaikan cepat dan bisa ditunggu, hanya 1 jam</li>
               </ul>
             </div>
