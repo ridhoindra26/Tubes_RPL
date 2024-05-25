@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\KatalogController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\LowonganController;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;
@@ -29,3 +30,5 @@ Route::get('/article', [ArticleController::class, 'index']);
 Route::get('/articledetail/{id}', [ArticleController::class, 'articleDetail']);
 Route::get('/articledetail/suka/{id}', [ArticleController::class, 'articleSuka']);
 Route::post('/articledetail/komentar/{id}', [ArticleController::class, 'articleKomentar']);
+
+Route::get('/lowongan', [LowonganController::class, 'index']);
