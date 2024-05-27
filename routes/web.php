@@ -29,3 +29,4 @@ Route::get('/article', [ArticleController::class, 'index']);
 Route::get('/articledetail/{id}', [ArticleController::class, 'articleDetail']);
 Route::get('/articledetail/suka/{id}', [ArticleController::class, 'articleSuka']);
 Route::post('/articledetail/komentar/{id}', [ArticleController::class, 'articleKomentar']);
+route::get('/status', [Controller::class, 'status']);

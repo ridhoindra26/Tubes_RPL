@@ -86,15 +86,30 @@ class Controller extends BaseController
 
     }
 
-    
-    public function results(Request $request)
+
+    public function status(Request $request)
 
     {
+        // echo $request->status;
+        $url = "https://rbm-borneo.com/Store/BAYUTIRTA/cekresi";
 
-        $query = $request->input('query');
+        $curl =curl_init();
+
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+        $data = array(
+        'invoice' => $request->status
+        );
+
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+
+        $response = curl_exec($curl);
+        curl_close($curl);
 
 
-        return view('search.results', ['query' => $query]);
+        return $response;
 
     }
 }
