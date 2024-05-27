@@ -20,7 +20,8 @@ class Controller extends BaseController
 {
     public function index()
     {
-
+        $response = file_get_contents('https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ-4NA1pSdeC4R5ik3KRItaq8&key=AIzaSyBGr_Mzjw025m1jTs-YnbWMXVNeQ1WgCjw');
+        $response = json_decode($response);
         $layanan = Layanan::where('status', '=', 1)->get();
         // return response()->json([
         //             'layanan' => $layanans,
@@ -29,7 +30,7 @@ class Controller extends BaseController
         return view('home',[
 
             'pilihan' => $layanan,
-
+            'ulasan' => $response->result->reviews
             ]);
     }
 

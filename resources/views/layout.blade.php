@@ -51,6 +51,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/article') }}">Artikel</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{ url('/lowongan') }}">Lowongan</a>
+          </li>
         </ul>
       </div>
     </div>
