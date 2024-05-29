@@ -26,7 +26,7 @@
               </ul>
             </div>
             <div class="action">
-              <button><a href="{{ url('/#consultation') }}" class="text-decoration-none text-white">Reservasi Service</a></button>
+              <button><a href="{{ url('/#consultation') }}" class="text-decoration-none text-white">Beli Langsung</a></button>
               <div class="logo">
                     @if ($detail->Kategori == 'xiaomi')
                         <div class="brand">
