@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Bayu Celluler | Service')
+@section('title', 'Bayu Celluler | Lowongan')
 
 @section('content')
 <main>

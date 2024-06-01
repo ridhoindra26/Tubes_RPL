@@ -32,3 +32,4 @@ Route::get('/articledetail/suka/{id}', [ArticleController::class, 'articleSuka']
 Route::post('/articledetail/komentar/{id}', [ArticleController::class, 'articleKomentar']);
 
 Route::get('/lowongan', [LowonganController::class, 'index']);
+Route::get('/lowongandetail/{id}', [LowonganController::class, 'lowongandetail']);
