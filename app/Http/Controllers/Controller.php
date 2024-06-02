@@ -20,7 +20,8 @@ class Controller extends BaseController
 {
     public function index()
     {
-
+        $response = file_get_contents('https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ-4NA1pSdeC4R5ik3KRItaq8&key=AIzaSyBGr_Mzjw025m1jTs-YnbWMXVNeQ1WgCjw');
+        $response = json_decode($response);
         $layanan = Layanan::where('status', '=', 1)->get();
         // return response()->json([
         //             'layanan' => $layanans,
@@ -29,7 +30,7 @@ class Controller extends BaseController
         return view('home',[
 
             'pilihan' => $layanan,
-
+            'ulasan' => $response->result->reviews
             ]);
     }
 
@@ -86,15 +87,30 @@ class Controller extends BaseController
 
     }
 
-    
-    public function results(Request $request)
+
+    public function status(Request $request)
 
     {
+        // echo $request->status;
+        $url = "https://rbm-borneo.com/Store/BAYUTIRTA/cekresi";
 
-        $query = $request->input('query');
+        $curl =curl_init();
+
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+        $data = array(
+        'invoice' => $request->status
+        );
+
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+
+        $response = curl_exec($curl);
+        curl_close($curl);
 
 
-        return view('search.results', ['query' => $query]);
+        return $response;
 
     }
 }
