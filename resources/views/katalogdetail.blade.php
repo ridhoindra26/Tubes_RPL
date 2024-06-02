@@ -88,7 +88,8 @@
                         fill="black" />
                     </svg>
                   </a>
-                  <button>Tambah Diskusi</button>
+                  <button id="tambah-diskusi">Tambah Diskusi</button>
+
                 </div>
 
               </div>
@@ -126,38 +127,38 @@
               </div>  
               @endif
             </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <!-- Reservasi -->
-  <div class="reservasi">
-    <div class="container bg-black rounded-4">
-      <div class="reservasi-wrapper">
-        <div class="row">
-          <div class="col-xl-5">
-            <div class="reservasi-cta">
-              <div class="title">
-                <h5 class="font-jakarta">Masih Ragu? Konsultasikan Sekarang!</h5>
-                <p class="font-jakarta">Hubungi admin kami untuk melakukan konsultasi sebelum melakukan reservasi
-                  layanan kami. Tim kami akan melakukan observasi dan diagnosa kerusakan perangkatmu.</p>
-              </div>
-              <div class="button">
-                <button class="bg-purple text-white"><a href="https://wa.me/6282257423118?text=Halo,%20saya%20ingin%20konsultasi%20&%20reservasi%20service%20smartphone" class="text-decoration-none text-white">Hubungi Kami</a></button>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-7">
-            <div class="reservasi-image">
-              <img src="{{ url('images/mockuptrans.png') }}" alt="mmockup">
-            </div>
+            <div id="komentar" class="container tab-pane"><br>
+              <div class="col-xl-12">
+                <form action="{{ url("/katalogdetail/diskusi/$item->id_penjualan") }}" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                  <div class="consultation-form">
+                    <h3>Tambah Diskusi</h3><br>
+                    <div class="form">
+                      <label for="name">Nama <span>*</span></label>
+                      <div class="input">
+                        <input type="text" name="name" placeholder="Masukkan nama anda">
+                      </div>
+                    </div>
+                    <div class="form mt-xl-4">
+                      <label for="name">Komentar <span>*</span></label>
+                      <div class="input">
+                        <textarea name="isi" id="" cols="10" rows="5" placeholder="Masukkan komentar anda"></textarea>
+                      </div>
+                    </div>
+                    <div class="button-form">
+                      <button>Kirim</button>
+                    </div>
+                  </div>
+                </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- End : reservasi -->
+<script>
+    document.getElementById("tambah-diskusi").addEventListener("click", function() {
+        document.getElementById("komentar").scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
 </main>
 @endsection

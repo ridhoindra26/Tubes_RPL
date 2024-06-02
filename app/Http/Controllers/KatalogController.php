@@ -28,16 +28,17 @@ class KatalogController extends Controller
         ]);
     }
 
-    public function katalogDiskusi(Request $request,string $id) {
+    public function katalogDiskusi(Request $request, string $id)
+    {
         $validatedData = $request->validate([
             'name' => 'required|max:255',
-            'komentar' => 'required'
+            'isi' => 'required'
         ]);
 
         $post = new KatalogDiskusi([
-            'id_artikel' => $id,
+            'id_penjualan' => $id,
             'name' => $validatedData['name'],
-            'isi' => $validatedData['komentar'],
+            'isi' => $validatedData['isi'], 
             'created_at' => now()
         ]);
 
