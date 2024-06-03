@@ -119,8 +119,8 @@
   </section>
   <!-- End : Service -->
   <!-- Status Service -->
-  <form action=>
-    <input type="text" name="query" placeholder="Search...">
+  <form action="/status" method="GET">
+    <input type="text" name="status" placeholder="Search...">
     <button type="submit">Search</button>
 </form>
 
