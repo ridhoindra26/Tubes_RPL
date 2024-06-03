@@ -129,27 +129,27 @@
             </div>
             <div id="komentar" class="container tab-pane"><br>
               <div class="col-xl-12">
-                <form action="{{ url("/katalogdetail/diskusi/$item->id_penjualan") }}" method="POST" enctype="multipart/form-data">
-                    {{ csrf_field() }}
-                  <div class="consultation-form">
-                    <h3>Tambah Diskusi</h3><br>
-                    <div class="form">
-                      <label for="name">Nama <span>*</span></label>
+              <form action="{{ url("/katalogdetail/diskusi/$item->id_penjualan") }}" method="POST" enctype="multipart/form-data">
+              {{ csrf_field() }}
+              <div class="consultation-form">
+                  <h3>Tambah Diskusi</h3><br>
+                  <div class="form">
+                      <label for="name">Nama<span>*</span></label>
                       <div class="input">
-                        <input type="text" name="name" placeholder="Masukkan nama anda">
+                          <input type="text" name="name" placeholder="Masukkan nama anda" required>
                       </div>
-                    </div>
-                    <div class="form mt-xl-4">
-                      <label for="name">Komentar <span>*</span></label>
-                      <div class="input">
-                        <textarea name="isi" id="" cols="10" rows="5" placeholder="Masukkan komentar anda"></textarea>
-                      </div>
-                    </div>
-                    <div class="button-form">
-                      <button>Kirim</button>
-                    </div>
                   </div>
-                </form>
+                  <div class="form mt-xl-4">
+                      <label for="name">Komentar<span>*</span></label>
+                      <div class="input">
+                          <textarea name="isi" id="" cols="10" rows="5" placeholder="Masukkan isi diskusi anda" required></textarea>
+                      </div>
+                  </div>
+                  <div class="button-form">
+                      <button type="submit">Kirim</button>
+                  </div>
+              </div>
+              </form>
           </div>
         </div>
       </div>
