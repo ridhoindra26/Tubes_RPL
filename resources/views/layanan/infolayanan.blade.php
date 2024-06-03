@@ -20,7 +20,7 @@
                         <label for="formFile" class="form-label">
                             Upload Thumbnail Layanan (Jika ingin diubah)<span class="req">*</span>
                         </label>
-                        <input class="form1 form-control" type="file" name="foto" id="formFile"required>
+                        <input class="form1 form-control" type="file" name="foto" id="formFile">
                     </div>
         
                     <div className="row align-items-center">
@@ -146,7 +146,7 @@
                         <label for="formFile" class="form-label">
                             Upload Thumbnail Layanan<span class="req">*</span>
                         </label>
-                        <input class="form1 form-control" type="file" name="foto" id="formFile"required>
+                        <input class="form1 form-control" type="file" name="foto" id="formFile">
                     </div>
         
                     <div className="row align-items-center">

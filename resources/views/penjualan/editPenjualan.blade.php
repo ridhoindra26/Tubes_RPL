@@ -47,7 +47,7 @@
                     class="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Kategori (Merk Perusahaan)"
-                    value="{{$detail->kategori}}"
+                    value="{{$detail->Kategori}}"
                     required>
             </div>
             <div className="row align-items-center">

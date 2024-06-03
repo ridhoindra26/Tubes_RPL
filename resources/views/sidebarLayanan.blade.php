@@ -26,7 +26,7 @@
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                         </div> 
                 </a> --> --}}
-                 <a href="/layanan/qna" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center
+                 <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center
                         {{ Request::is('layanan.qna') ? 'active' : '' }}">
                         <p>Active?</p>
                         <div class="form-check form-switch">
