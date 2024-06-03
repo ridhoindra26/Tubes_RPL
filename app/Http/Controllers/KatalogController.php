@@ -7,9 +7,9 @@ use Illuminate\Http\Response;
 
 use App\Models\Katalog;
 use App\Models\KatalogDiskusi;
+
 class KatalogController extends Controller
 {
-    
     public function index()
     {
         $katalogs = Katalog::all();
@@ -22,6 +22,7 @@ class KatalogController extends Controller
     {
         $detail = Katalog::where('id_penjualan', '=', $id)->first();
         $diskusi = KatalogDiskusi::where('id_penjualan', '=', $id)->get();
+        
         return view('katalogdetail', [
             'detail' => $detail,
             'diskusi' => $diskusi
@@ -45,5 +46,4 @@ class KatalogController extends Controller
         $post->save();
         return redirect()->back();
     }
-    
 }

@@ -93,8 +93,8 @@
                 </div>
 
               </div>
-              @if(isset($diskusi) && $diskusi->isNotEmpty()) 
               @foreach($diskusi as $item)
+              @if(isset($diskusi) && $diskusi->isNotEmpty()) 
               <div class="review-testimonial">
                 <div class="row">
                   <div class="row">
@@ -120,16 +120,15 @@
                     </div>
                 </div>
               </div>
-              @endforeach
               @else
               <div class="message text-center">
                   <h3 class="fw-bold">Belum ada diskusi</h3>
               </div>  
               @endif
-            </div>
+              @endforeach
             <div id="komentar" class="container tab-pane"><br>
               <div class="col-xl-12">
-              <form action="{{ url("/katalogdetail/diskusi/$item->id_penjualan") }}" method="POST" enctype="multipart/form-data">
+              <form action="{{ url("/katalogdetail/diskusi/$detail->id_penjualan") }}" method="POST" enctype="multipart/form-data">
               {{ csrf_field() }}
               <div class="consultation-form">
                   <h3>Tambah Diskusi</h3><br>
@@ -150,6 +149,7 @@
                   </div>
               </div>
               </form>
+          </div>
           </div>
         </div>
       </div>
