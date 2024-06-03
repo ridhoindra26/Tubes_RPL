@@ -22,7 +22,7 @@
     </div>
   </section>
   <!-- Part -->
-  
+
   <section class="part">
     <div class="container">
       <div class="row">
@@ -71,7 +71,7 @@
                 <p>Klik tombol “Tambah Katalog” di atas kanan halaman ini</p>
             </div>
         @endif
-        
+
       </div>
     </div>
   </section>
