@@ -33,7 +33,7 @@
                   <a href="{{ url("/servicedetail/$item->id_layanan") }}" class="text-decoration-none">
                     <div class="part-card">
                       <div class="image">
-                        <img src="images/layanan/{{$item->foto}}" onerror="this.src='images/service2.png'" alt="images/service2.png">
+                        <img style="height: 270px; width: 415px; object-fit: cover; border-radius:20px" src="images/layanan/{{$item->foto}}" onerror="this.src='images/service2.png'" alt="images/service2.png">
                       </div>
                       <div class="body">
                         <h5 class="title font-jakarta">{{$item->nama_layanan}}</h5>
