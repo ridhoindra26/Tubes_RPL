@@ -10,7 +10,7 @@
       <div class="row align-items-lg-center">
         <div class="col-xl-5">
           <div class="service-detail-image">
-          <img src="images/katalog/{{$detail->foto}}">
+          <img src="../images/katalog/{{$detail->foto}}">
           </div>
         </div>
         <div class="col-xl-5">
