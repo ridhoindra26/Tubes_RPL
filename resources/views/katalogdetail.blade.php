@@ -10,7 +10,7 @@
       <div class="row align-items-lg-center">
         <div class="col-xl-5">
           <div class="service-detail-image">
-          <img src="images/katalog/{{$detail->foto}}">
+          <img src="../images/katalog/{{$detail->foto}}">
           </div>
         </div>
         <div class="col-xl-5">
@@ -26,7 +26,7 @@
               </ul>
             </div>
             <div class="action">
-              <button><a href="{{ url('/#consultation') }}" class="text-decoration-none text-white">Reservasi Service</a></button>
+              <button><a href="{{ url('/#consultation') }}" class="text-decoration-none text-white">Beli Langsung</a></button>
               <div class="logo">
                     @if ($detail->Kategori == 'xiaomi')
                         <div class="brand">
@@ -88,12 +88,13 @@
                         fill="black" />
                     </svg>
                   </a>
-                  <button>Tambah Diskusi</button>
+                  <button id="tambah-diskusi">Tambah Diskusi</button>
+
                 </div>
 
               </div>
-              @if(isset($diskusi) && $diskusi->isNotEmpty()) 
               @foreach($diskusi as $item)
+              @if(isset($diskusi) && $diskusi->isNotEmpty()) 
               <div class="review-testimonial">
                 <div class="row">
                   <div class="row">
@@ -119,45 +120,45 @@
                     </div>
                 </div>
               </div>
-              @endforeach
               @else
               <div class="message text-center">
                   <h3 class="fw-bold">Belum ada diskusi</h3>
               </div>  
               @endif
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <!-- Reservasi -->
-  <div class="reservasi">
-    <div class="container bg-black rounded-4">
-      <div class="reservasi-wrapper">
-        <div class="row">
-          <div class="col-xl-5">
-            <div class="reservasi-cta">
-              <div class="title">
-                <h5 class="font-jakarta">Masih Ragu? Konsultasikan Sekarang!</h5>
-                <p class="font-jakarta">Hubungi admin kami untuk melakukan konsultasi sebelum melakukan reservasi
-                  layanan kami. Tim kami akan melakukan observasi dan diagnosa kerusakan perangkatmu.</p>
+              @endforeach
+            <div id="komentar" class="container tab-pane"><br>
+              <div class="col-xl-12">
+              <form action="{{ url("/katalogdetail/diskusi/$detail->id_penjualan") }}" method="POST" enctype="multipart/form-data">
+              {{ csrf_field() }}
+              <div class="consultation-form">
+                  <h3>Tambah Diskusi</h3><br>
+                  <div class="form">
+                      <label for="name">Nama<span>*</span></label>
+                      <div class="input">
+                          <input type="text" name="name" placeholder="Masukkan nama anda" required>
+                      </div>
+                  </div>
+                  <div class="form mt-xl-4">
+                      <label for="name">Komentar<span>*</span></label>
+                      <div class="input">
+                          <textarea name="isi" id="" cols="10" rows="5" placeholder="Masukkan isi diskusi anda" required></textarea>
+                      </div>
+                  </div>
+                  <div class="button-form">
+                      <button type="submit">Kirim</button>
+                  </div>
               </div>
-              <div class="button">
-                <button class="bg-purple text-white"><a href="https://wa.me/6282257423118?text=Halo,%20saya%20ingin%20konsultasi%20&%20reservasi%20service%20smartphone" class="text-decoration-none text-white">Hubungi Kami</a></button>
-              </div>
-            </div>
+              </form>
           </div>
-          <div class="col-xl-7">
-            <div class="reservasi-image">
-              <img src="{{ url('images/mockuptrans.png') }}" alt="mmockup">
-            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- End : reservasi -->
+<script>
+    document.getElementById("tambah-diskusi").addEventListener("click", function() {
+        document.getElementById("komentar").scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
 </main>
 @endsection
