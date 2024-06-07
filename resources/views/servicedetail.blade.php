@@ -10,7 +10,7 @@
       <div class="row align-items-lg-center">
         <div class="col-xl-5">
           <div class="service-detail-image">
-            <img src="images/layanan/{{$detail->foto}}" onerror="this.src='{{ url('images/service2.png') }}'" alt="images/service2.png">
+            <img src="{{ url("https://admin.bayutirta.masuk.id/public/layanan/$detail->foto") }}" onerror="this.src='https://admin.bayutirta.masuk.id/public/images/service2.png'" alt="images/service2.png">
           </div>
         </div>
         <div class="col-xl-5">
@@ -47,13 +47,11 @@
               </div>
               <p>4.5/5</p>
             </div>
-            <div class="price font-jakarta">{{$detail->harga_terendah}} - {{$detail->harga_tertinggi}}
-              {{-- <span class="discount">-40%</span> --}}
-            </div>
+            <div class="price font-jakarta">{{$detail->harga_terendah}} - {{$detail->harga_tertinggi}}<span class="discount">-40%</span></div>
             <div class="list">
               <p>Layanan perbaikan ganti baterai </p>
               <ul>
-                <li>Baterai baru dengan jaminan mutu terunggul dan keaslian yang terjamin 100%</li>
+                <li>Baterai baru dengan jaminan kualitas terbaik 100% original</li>
                 <li>Proses perbaikan cepat dan bisa ditunggu, hanya 1 jam</li>
               </ul>
             </div>
@@ -95,6 +93,30 @@
 
           <!-- Tab panes -->
           <div class="tab-content">
+            <div id="deskripsi" class="container tab-pane active"><br>
+              <p class="description-text font-jakarta">{{$detail->keterangan}}</p>
+              <div class="details-brand">
+                <div class="desc">
+                  <div class="original">
+                    <h5 class="font-jakarta">Kualitas</h5>
+                    <p class="font-jakarta">Original</p>
+                  </div>
+                  <div class="duration">
+                    <h5 class="font-jakarta">Durasi Perbaikan</h5>
+                    <p class="font-jakarta">120 menit - 240 menit</p>
+                  </div>
+                  <div class="guarantee-part">
+                    <h5 class="font-jakarta">Garansi Barang</h5>
+                    <p class="font-jakarta">6 Bulan</p>
+                  </div>
+                  <div class="guarantee-service">
+                    <h5 class="font-jakarta">Garansi Service</h5>
+                    <p class="font-jakarta">3 hari</p>
+                  </div>
+                </div>
+                <button>Lihat Detail Merk</button>
+              </div>
+            </div>
             <div id="review" class="container tab-pane fade"><br>
               <div class="review">
                 <h5>Semua Review</h5>
