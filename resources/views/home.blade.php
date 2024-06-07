@@ -119,14 +119,18 @@
   </section>
   <!-- End : Service -->
   <!-- Status Service -->
-  <form action="/status" method="GET">
-    <input type="text" name="status" placeholder="Search...">
-    <button type="submit">Search</button>
-</form>
+  <div class="service-check">
+    <h2>SERVICE CHECK</h2>
+        <div class="form-group">
+            <form action="/status" method="GET">
+            <input type="text" name="status" class="form-control" id="invoiceNumber" placeholder="Enter Invoice Number">
+        </div>
+        <button type="submit" class="btn btn-primary">SEARCH</button>
+</div>
 
   <!-- End : Status Service -->
 
-  <!-- Testimonial -->
+<!-- Testimonial -->
   <div class="testimonial" id="testimonial">
     <div class="container">
       <div class="row justify-content-xl-center">
@@ -145,7 +149,7 @@
           {{-- {{print_r($ulasan)}} --}}
           {{-- {{dd($ulasan)}} --}}
           @foreach ($ulasan as $item)
-          
+
           {{-- @foreach ($item as $a)
           {{dd($a)}}
           <br>
@@ -184,7 +188,7 @@
                 <p>Klik button “Tambah Layanan” di atas kanan halaman ini</p>
             </div>
         @endif
-          
+
           {{-- <div class="item text-start">
             <span class="font-jakarta title">Satisfied User Here!</span>
             <p class="font-jakarta desc">Never thought that with Spend.In managing my business expenses is so easy!
