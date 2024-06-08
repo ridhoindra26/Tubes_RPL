@@ -24,14 +24,14 @@
             @foreach ($artikel as $item)
             <div class="card" style="width: 18rem;">
                 @if ($item->foto)
-                    <img src="{{ url('public/artikel/'.$item->foto) }}"style="height: auto; width: auto;">
+                    <img src="{{ url('images/artikel/'.$item->foto) }}"style="height: auto; width: auto;">
                 @endif
                 <div class="card-body">
                     <h4>{{$item->judul}}</h4>
                     <p class="card-teks">{{$item->isi}}</p>
                     <div class="d-flex justify-content-between align-items-center pt-3">
                         <div class="btn-group">
-                            <a href="{{ url("/artikel/delete/$item->id_artikel") }}"><button type="button" class="btn btn-sm btn-outline-danger">Delete</button></a>
+                            <a href="{{ url("/artikel/delete/$item->id_artikel") }}" onclick="return confirmDelete();"><button type="button" class="btn btn-sm btn-outline-danger">Delete</button></a>
                             <a href="{{ url("/artikel/$item->id_artikel") }}"><button type="button" class="btn btn-3 btn-sm btn-outline-secondary">Edit</button></a>
                         </div>
                         <small class="text-body-secondary">{{$item->created_at->format('d-m-Y')}}</small>
@@ -50,7 +50,8 @@
     <!--            <li class="page-item" aria-current="page">-->
     <!--                <a class="page-link" href="#">2</a>-->
     <!--            </li>-->
-    <!--            <li class="page-item"><a class="page-link" href="#">3</a></li>-->
+    <!--            <li class="page-item"><a class="page-link" href="#">3</a>-->
+    <!--            </li>-->
     <!--            <li class="page-item">-->
     <!--                <a class="page-link" href="#">Next</a>-->
     <!--            </li>-->
@@ -71,5 +72,10 @@
     </div>
 </div>
 
+<script>
+    function confirmDelete() {
+        return confirm('Apakah Anda yakin ingin menghapus artikel ini?');
+    }
+</script>
 
 @endsection
