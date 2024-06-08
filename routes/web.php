@@ -27,6 +27,7 @@ Route::post('/reservasi', [Controller::class, 'addReservasi']);
 Route::get('/katalogview', [KatalogController::class, 'index']);
 Route::get('/katalogdetail/{id}', [KatalogController::class, 'katalogDetail']);
 Route::post('/katalogdetail/diskusi/{id}', [KatalogController::class, 'katalogDiskusi']);
+Route::get('/katalogdetail/delete/{id}', [KatalogController::class, 'deleteDiskusi']);
 Route::get('/article', [ArticleController::class, 'index']);
 Route::get('/articledetail/{id}', [ArticleController::class, 'articleDetail']);
 Route::get('/articledetail/suka/{id}', [ArticleController::class, 'articleSuka']);
