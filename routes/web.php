@@ -5,6 +5,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\KatalogController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\LowonganController;
+use App\Http\Controllers\FaqController;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;
@@ -34,3 +35,4 @@ route::get('/status', [Controller::class, 'status']);
 
 Route::get('/lowongan', [LowonganController::class, 'index']);
 Route::get('/lowongandetail/{id}', [LowonganController::class, 'lowongandetail']);
+

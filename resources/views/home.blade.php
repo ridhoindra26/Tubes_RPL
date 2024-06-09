@@ -127,6 +127,7 @@
         </div>
         <button type="submit" class="btn btn-primary">SEARCH</button>
 </div>
+</form>
 
   <!-- End : Status Service -->
 
@@ -229,6 +230,7 @@
   <!-- End : Testimonial -->
 
   <!-- Question -->
+  <!-- Question -->
   <div class="question" id="question">
     <div class="container">
       <div class="row justify-content-xl-between ">
@@ -240,56 +242,28 @@
         <div class="col-xl-6">
           <div class="question-accordion">
             <div class="accordion " id="accordionExample">
+              @foreach ($faq as $item)
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Apa jenis layanan perbaikan yang ditawarkan oleh konter kami?
+                    {{$item->judul}}
                   </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>Kami menawarkan berbagai layanan perbaikan.</strong> untuk beragam masalah pada perangkat HP,
-                    termasuk layar pecah, baterai yang rusak, masalah perangkat lunak, dan banyak lagi.
+                    {{$item->isi}}
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Berapa lama waktu yang dibutuhkan untuk memperbaiki perangkat HP?
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>Waktu perbaikan.</strong> Waktu perbaikan dapat bervariasi tergantung pada tingkat kerusakan dan ketersediaan suku cadang.
-                    Kami berusaha untuk menyelesaikan perbaikan sesegera mungkin dan akan memberikan perkiraan waktu kepada Anda
-                    ketika Anda mengajukan perangkat untuk diperbaiki.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Apakah perbaikan perangkat HP kami dilengkapi dengan garansi?
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>Ya,</strong> kami memberikan garansi terbatas untuk perbaikan yang kami lakukan.
-                    Garansi ini mencakup masalah yang mungkin timbul setelah perbaikan selesai.
-                    Detail garansi akan dijelaskan saat Anda melakukan perbaikan.
-                  </div>
-                </div>
-              </div>
+              @endforeach
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- End : Question -->
   <!-- End : Question -->
   <!-- consultation -->
   <div class="consultation" id="consultation">
