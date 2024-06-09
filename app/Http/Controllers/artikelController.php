@@ -49,8 +49,8 @@ class artikelController extends Controller
             // Storage::disk('public')->url($filename);
             // Storage::putFile('photos', new File('admin.bayutirta.masuk.id/public/Image'), $filename);
             //$file->storeAs('artikel', $filename, 'public');
-            // $file->move('admin.bayutirta.masuk.id/public/Image' , $filename);
-            $file-> move(public_path(), $filename);
+            //$file->move('Image/artikel' , $filename);
+            $file-> move(public_path('images/artikel'), $filename);
             // $request['foto']= $filename;
             $post = new Artikel([
             'judul' => $validatedData['judul'],
@@ -96,7 +96,8 @@ class artikelController extends Controller
             // Storage::putFile('photos', new File('admin.bayutirta.masuk.id/public/Image'), $filename);
             $file->storeAs('artikel', $filename, 'public');
             // $file->move('admin.bayutirta.masuk.id/public/Image' , $filename);
-            // $file-> move(public_path(), $filename);
+            //$file-> move(public_path(), $filename);
+            $file-> move(public_path('images/artikel'), $filename);
             // $request['foto']= $filename;
             Artikel::where('id_artikel', '=', $id)->update([
                 'foto' => $filename

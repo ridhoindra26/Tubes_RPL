@@ -5,7 +5,7 @@
         <div class="artikelTitle">Ulasan</div>
     </div>
     <div class="card-list-ulasan">
-        <h5>Ulasan Google Maps</h5>
+        <h5>Ulasan Pelanggan</h5>
         @if (isset($ulasan) AND count($ulasan)>0)
         @foreach ($ulasan as $item)
         <div class="card">
