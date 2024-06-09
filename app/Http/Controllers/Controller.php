@@ -14,7 +14,7 @@ use Illuminate\Http\Response;
 use App\Models\Layanan;
 use App\Models\Reservasi;
 use App\Models\Artikel;
-use App\Models\faq;
+use App\Models\Faq;
 use App\Models\Ulasan;
 
 class Controller extends BaseController

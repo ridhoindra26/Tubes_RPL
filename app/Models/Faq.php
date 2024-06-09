@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Faq extends Model
 {
     protected $fillable = [
-        'Judul',
-        'isi',
-        
+        'question',
+        'answer',
+
     ];
 }
 
