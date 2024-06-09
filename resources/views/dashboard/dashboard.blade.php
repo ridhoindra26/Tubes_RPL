@@ -440,7 +440,7 @@
 </div>
 <!-- End -->
                   @endif
-                  
+
                 </div>
 
               </div>
@@ -620,3 +620,4 @@
     chart.render();
   </script>
 @endsection
+
