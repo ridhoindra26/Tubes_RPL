@@ -14,6 +14,7 @@ use Illuminate\Http\Response;
 use App\Models\Layanan;
 use App\Models\Reservasi;
 use App\Models\Artikel;
+use App\Models\Faq;
 use App\Models\Ulasan;
 
 class Controller extends BaseController
@@ -23,12 +24,13 @@ class Controller extends BaseController
         $response = file_get_contents('https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ-4NA1pSdeC4R5ik3KRItaq8&key=AIzaSyBGr_Mzjw025m1jTs-YnbWMXVNeQ1WgCjw');
         $response = json_decode($response);
         $layanan = Layanan::where('status', '=', 1)->get();
+        $faqs = Faq::all();
         // return response()->json([
         //             'layanan' => $layanans,
         //             'artikel' => $artikel,
         //             'ulasan' => $ulasan]);
         return view('home',[
-
+            'faq'=> $faqs,
             'pilihan' => $layanan,
             'ulasan' => $response->result->reviews
             ]);
