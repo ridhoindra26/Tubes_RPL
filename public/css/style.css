@@ -1187,6 +1187,10 @@ body {
   flex-shrink: 0;
 }
 
+.dropdown-item:hover {
+  color: black !important;
+}
+
 .footer .telp .desc h5,
 .footer .telp .desc p,
 .footer .whatsapp .desc h5,

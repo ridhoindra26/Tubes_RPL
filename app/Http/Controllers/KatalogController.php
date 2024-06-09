@@ -20,8 +20,11 @@ class KatalogController extends Controller
 
     public function katalogdetail(string $id)
     {
+        $sort = request('sort', 'terbaru'); // default sort adalah 'terbaru'
         $detail = Katalog::where('id_penjualan', '=', $id)->first();
-        $diskusi = KatalogDiskusi::where('id_penjualan', '=', $id)->get();
+        $diskusi = KatalogDiskusi::where('id_penjualan', '=', $id)
+        ->orderBy('created_at', $sort == 'terbaru' ? 'desc' : 'asc')
+        ->get();
         
         return view('katalogdetail', [
             'detail' => $detail,
@@ -29,6 +32,7 @@ class KatalogController extends Controller
         ]);
     }
 
+    
     public function katalogDiskusi(Request $request, string $id)
     {
         $validatedData = $request->validate([
@@ -45,5 +49,13 @@ class KatalogController extends Controller
 
         $post->save();
         return redirect()->back();
+    }
+
+    public function deleteDiskusi(string $id)
+    {
+        $diskusi = KatalogDiskusi::where('id_diskusi', '=', $id)->first();
+        $id_penjualan = $diskusi->id_penjualan;
+        KatalogDiskusi::where('id_diskusi', '=', $id)->delete();
+        return redirect('katalogdetail/' . $id_penjualan);
     }
 }
