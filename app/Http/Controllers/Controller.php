@@ -25,11 +25,15 @@ class Controller extends BaseController
         $response = json_decode($response);
         $layanan = Layanan::where('status', '=', 1)->get();
         $faqs = Faq::all();
+        $layanans = Layanan::where('status', '=', 1)->take(3)->get();
+        $artikel = Artikel::all()->take(3);
         // return response()->json([
         //             'layanan' => $layanans,
         //             'artikel' => $artikel,
         //             'ulasan' => $ulasan]);
         return view('home',[
+            'layanan' => $layanans,
+            'artikel' => $artikel,
             'faq'=> $faqs,
             'pilihan' => $layanan,
             'ulasan' => $response->result->reviews

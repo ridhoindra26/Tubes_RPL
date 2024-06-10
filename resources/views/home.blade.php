@@ -131,6 +131,258 @@
 
   <!-- End : Status Service -->
 
+  <!-- Transaction -->
+  <div class="transaction" id="transaction">
+    <div class="container">
+      <div class="row justify-content-xl-center">
+        <div class="col-xl-6">
+          <div class="transaction-title">
+            <h2 class="font-jakarta">Mudah, Simple, Terjangkau</h2>
+            <p class="font-jakarta">Nikmati Kemudahan Layanan Service Handphone di dalam
+              satu platform Bayu Tirta Cell.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row gap-lg-1 align-items-center">
+        <div class="col-xl-6">
+          <div class="transaction-image">
+            <img src="{{ url('images/content.png') }}" alt="content">
+          </div>
+        </div>
+        <div class="col-xl-5">
+          <div class="transaction-item">
+            <svg width="50" height="50" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="0.5" width="50" height="50" rx="12" fill="#4F46E5" />
+              <path
+                d="M18 28.5C17.06 28.5 16.19 28.83 15.5 29.38C14.58 30.11 14 31.24 14 32.5C14 34.71 15.79 36.5 18 36.5C19.01 36.5 19.93 36.12 20.64 35.5C21.47 34.77 22 33.7 22 32.5C22 30.29 20.21 28.5 18 28.5ZM19 32.75C19 33.01 18.86 33.26 18.64 33.39L17.39 34.14C17.27 34.22 17.13 34.25 17 34.25C16.75 34.25 16.5 34.12 16.36 33.89C16.15 33.53 16.26 33.07 16.62 32.86L17.51 32.33V31.25C17.5 30.84 17.84 30.5 18.25 30.5C18.66 30.5 19 30.84 19 31.25V32.75Z"
+                fill="white" />
+              <path
+                d="M27.85 17.45V21.25H26.35V17.45C26.35 17.18 26.11 17.05 25.95 17.05C25.9 17.05 25.85 17.06 25.8 17.08L17.87 20.07C17.34 20.27 17 20.77 17 21.34V22.01C16.09 22.69 15.5 23.78 15.5 25.01V21.34C15.5 20.15 16.23 19.09 17.34 18.67L25.28 15.67C25.5 15.59 25.73 15.55 25.95 15.55C26.95 15.55 27.85 16.36 27.85 17.45Z"
+                fill="white" />
+              <path
+                d="M34.4999 28V29C34.4999 29.27 34.2899 29.49 34.0099 29.5H32.5499C32.0199 29.5 31.5399 29.11 31.4999 28.59C31.4699 28.28 31.5899 27.99 31.7899 27.79C31.9699 27.6 32.2199 27.5 32.4899 27.5H33.9999C34.2899 27.51 34.4999 27.73 34.4999 28Z"
+                fill="white" />
+              <path
+                d="M32.48 26.45H33.5C34.05 26.45 34.5 26 34.5 25.45V25.01C34.5 22.94 32.81 21.25 30.74 21.25H19.26C18.41 21.25 17.63 21.53 17 22.01C16.09 22.69 15.5 23.78 15.5 25.01V26.79C15.5 27.17 15.9 27.41 16.26 27.29C16.82 27.1 17.41 27 18 27C21.03 27 23.5 29.47 23.5 32.5C23.5 33.22 23.31 34.01 23.01 34.71C22.85 35.07 23.1 35.5 23.49 35.5H30.74C32.81 35.5 34.5 33.81 34.5 31.74V31.55C34.5 31 34.05 30.55 33.5 30.55H32.63C31.67 30.55 30.75 29.96 30.5 29.03C30.3 28.27 30.54 27.53 31.04 27.05C31.41 26.67 31.92 26.45 32.48 26.45ZM27 26.25H22C21.59 26.25 21.25 25.91 21.25 25.5C21.25 25.09 21.59 24.75 22 24.75H27C27.41 24.75 27.75 25.09 27.75 25.5C27.75 25.91 27.41 26.25 27 26.25Z"
+                fill="white" />
+            </svg>
+            <div class="desc">
+              <h5 class="font-jakarta">Harga Ramah di Kantong</h5>
+              <p class="font-jakarta">Kami memastikan transparansi biaya di setiap layanan untuk kamu.</p>
+            </div>
+          </div>
+          <div class="transaction-item">
+            <svg width="50" height="50" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="0.5" width="50" height="50" rx="12" fill="#4F46E5" />
+              <path
+                d="M29 15.5H21C17.5 15.5 16 17.5 16 20.5V30.5C16 33.5 17.5 35.5 21 35.5H29C32.5 35.5 34 33.5 34 30.5V20.5C34 17.5 32.5 15.5 29 15.5ZM21 25.75H25C25.41 25.75 25.75 26.09 25.75 26.5C25.75 26.91 25.41 27.25 25 27.25H21C20.59 27.25 20.25 26.91 20.25 26.5C20.25 26.09 20.59 25.75 21 25.75ZM29 31.25H21C20.59 31.25 20.25 30.91 20.25 30.5C20.25 30.09 20.59 29.75 21 29.75H29C29.41 29.75 29.75 30.09 29.75 30.5C29.75 30.91 29.41 31.25 29 31.25ZM31.5 22.75H29.5C27.98 22.75 26.75 21.52 26.75 20V18C26.75 17.59 27.09 17.25 27.5 17.25C27.91 17.25 28.25 17.59 28.25 18V20C28.25 20.69 28.81 21.25 29.5 21.25H31.5C31.91 21.25 32.25 21.59 32.25 22C32.25 22.41 31.91 22.75 31.5 22.75Z"
+                fill="white" />
+            </svg>
+
+            <div class="desc">
+              <h5 class="font-jakarta">Layanan yang Lengkap</h5>
+              <p class="font-jakarta">Melayani berbagai jenis service handphone untuk dengan kualitas yang baik.</p>
+            </div>
+          </div>
+          <div class="transaction-item">
+            <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="0.5" width="50" height="50" rx="12" fill="#4F46E5" />
+              <path
+                d="M28.22 20.05H18.78C18.5 20.05 18.24 20.06 18 20.07C15.63 20.21 15 21.08 15 23.78V24.36C15 24.91 15.45 25.36 16 25.36H31C31.55 25.36 32 24.91 32 24.36V23.78C32 20.8 31.24 20.05 28.22 20.05Z"
+                fill="white" />
+              <path
+                d="M16 26.86C15.45 26.86 15 27.31 15 27.86V30.77C15 33.75 15.76 34.5 18.78 34.5H28.22C31.19 34.5 31.97 33.78 32 30.93V27.86C32 27.31 31.55 26.86 31 26.86H16ZM19.96 32.06H18.25C17.84 32.06 17.5 31.72 17.5 31.31C17.5 30.9 17.84 30.56 18.25 30.56H19.97C20.38 30.56 20.72 30.9 20.72 31.31C20.72 31.72 20.38 32.06 19.96 32.06ZM25.55 32.06H22.11C21.7 32.06 21.36 31.72 21.36 31.31C21.36 30.9 21.7 30.56 22.11 30.56H25.55C25.96 30.56 26.3 30.9 26.3 31.31C26.3 31.72 25.97 32.06 25.55 32.06Z"
+                fill="white" />
+              <path
+                d="M35.0001 26.83V21.59C35.0001 18.46 33.2101 17.1 30.5101 17.1H21.5801C20.8201 17.1 20.1401 17.21 19.5401 17.44C19.0701 17.61 18.6501 17.86 18.3101 18.19C18.1301 18.36 18.2701 18.64 18.5301 18.64H29.4001C31.6501 18.64 33.4701 20.46 33.4701 22.71V29.88C33.4701 30.13 33.7401 30.27 33.9201 30.09C34.6101 29.36 35.0001 28.29 35.0001 26.83Z"
+                fill="white" />
+            </svg>
+
+            <div class="desc">
+              <h5 class="font-jakarta">Hasil dan Garansi</h5>
+              <p class="font-jakarta">Hasil yang kami jamin terbaik akan kami tambahkan juga garansi 1 minggu setelah
+                barang diterima.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End : Transaction -->
+  <!-- Part -->
+  <section class="part">
+    <div class="container">
+      <div class="part-title">
+        <h2 class="font-jakarta">Layanan Kami</h2>
+      </div>
+      <div class="row">
+        @if (isset($layanan))
+            @foreach ($layanan as $item)
+            <div class="col-xl-4">
+                  <a href="{{ url("/servicedetail/$item->id_layanan") }}" class="text-decoration-none">
+                    <div class="part-card">
+                        
+                      <div class="image">
+                        <img style="height: 270px; width: 415px; object-fit: cover; border-radius:20px" src="{{ url("https://admin.bayutirta.masuk.id/public/layanan/$item->foto") }}" onerror="this.src='images/service2.png'" alt="images/service2.png">
+                      </div>
+                      <div class="body">
+                        <h5 class="title font-jakarta">{{$item->nama_layanan}}</h5>
+                        <p class="text">{{$item->keterangan}}</p>
+                      </div>
+                      <div class="logo">
+                        <div class="brand">
+                          <img src="{{ url('images/xiaomi.png') }}" alt="brand">
+                        </div>
+                        <div class="brand">
+                          <img src="{{ url('images/samsung.png') }}" alt="brand">
+                        </div>
+                        <div class="brand">
+                          <img src="{{ url('images/oppo.png') }}" alt="brand">
+                        </div>
+                        <div class="brand">
+                          <img src="{{ url('images/vivo.png') }}" alt="brand">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+            @endforeach
+        @else
+            <div class="picture">
+                <img src="/img/ALT 4.png" alt="noservice">
+            </div>
+            <div class="message text-center">
+                <h3 class="fw-bold">Belum ada layanan yang dibuat</h3>
+                <p>Buat dan atur layanan yang bisa diakses pelangganmu!</p>
+                <p>Klik button “Tambah Layanan” di atas kanan halaman ini</p>
+            </div>
+        @endif
+        <div class="devices-button">
+          <button><a class="button-link text-decoration-none text-light" aria-current="page" href="/service">Selengkapnya</a></button> 
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End : Part -->
+  <!-- Working -->
+  <div class="working" id="working">
+    <div class="container">
+      <div class="row justify-content-xl-between align-items-xl-center">
+        <div class="col-xl-4">
+          <div class="working-way">
+            <p class="font-jakarta">Cara Kerja</p>
+            <h5 class="font-jakarta">Langkah Sederhana Untuk Perbaikan</h5>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="working-count">
+                <h5>5,910+</h5>
+                <p>Customers yang menggunakan layanan</p>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="working-count">
+                <h5>240+</h5>
+                <p>Jenis handphone yang sudah pernah kami layani</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step-wrapper">
+        <div class="row justify-content-center">
+          <div class="col-xl-3">
+            <div class="working-step">
+              <div class="image step-1">
+                <img src="{{ url('images/work1.png') }}" alt="working">
+                <div class="body">
+                  <p class="text">Isi formulir reservasi yang disediakan.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3">
+            <div class="working-step">
+              <div class="image step-2">
+                <img src="{{ url('images/work2.png') }}" alt="working">
+                <div class="body">
+                  <p class="text">Admin akan mendiagnosa dan melakukan perbaikan</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-xl-3">
+            <div class="working-step">
+              <div class="image step-3">
+                <img src="{{ url('images/work3.png') }}" alt="working">
+                <div class="body">
+                  <p class="text">Selesai, dan ada garansi 2 minggu</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End : Working -->
+  <!-- Technician -->
+  <div class="technician">
+    <div class="container">
+      <div class="row align-items-xl-center justify-content-xl-between">
+        <div class="col-xl-6">
+          <div class="row">
+            <div class="col-xl-4">
+              <div class="technician-image ">
+                <img src="{{ url('images/teknisi1.png') }}" alt="technician">
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="technician-image">
+                <img src="{{ url('images/teknisi2.png') }}" alt="technician">
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="technician-image">
+                <img src="{{ url('images/teknisi3.png') }}" class="rounded-circle" alt="technician">
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="technician-image">
+                <img src="{{ url('images/teknisi4.png') }}" class="rounded-circle" alt="technician">
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="technician-image">
+                <img src="{{ url('images/teknisi5.png') }}" alt="technician">
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="technician-image">
+                <img src="{{ url('images/teknisi6.png') }}" alt="technician">
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-xl-5">
+          <div class="technician-desc">
+            <h5 class="font-jakarta">Teknisi Kami</h5>
+            <p>Discover the brilliance behind Embrace. Our team blends innovation and artistry to
+              craft digital wonders that captivate</p>
+          </div>
+          <div class="technician-count font-jakarta">6 teknisi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End : Technician -->
+
 <!-- Testimonial -->
   <div class="testimonial" id="testimonial">
     <div class="container">
@@ -264,7 +516,58 @@
     </div>
   </div>
   <!-- End : Question -->
-  <!-- End : Question -->
+<!-- Devices -->
+<div class="devices mt-7rem">
+  <div class="container">
+    <div class="row justify-content-xl-center">
+      <div class="col-xl-6">
+        <div class="devices-title">
+          <h5 class="font-jakarta">Cari Tahu Seputar Perangkat Kamu</h5>
+          <p class="font-jakarta">Beberapa tulisan dari tim kami untuk kamu agar semakin memahami perangkat kamu.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="devices-item">
+      <div class="row">
+        @if (isset($artikel))
+        @foreach ($artikel as $item)
+        <div class="col-xl-4">
+        <a href="{{ url("/articledetail/$item->id_artikel") }}" class="text-decoration-none">  <div class="card border-0 ">
+          <img style="height: 270px; width: 415px; object-fit: cover; border-radius:20px" src="images/artikel/{{$item->foto}}" class="card-img-top" alt="devices">
+          <div class="card-body p-0">
+            <h5 class="card-title font-jakarta">{{$item->judul}}</h5>
+            <p class="card-text font-jakarta">{{$item->isi}}</p>
+          </div>
+          <div class="card-profile">
+            <div class="image">
+              <img src="{{ url('images/profiledev1.png') }}" alt="profile">
+            </div>
+            <div class="position">
+              <h5>{{$item->nama_penulis}}</h5>
+              <p>{{$item->title_penulis}}</p>
+            </div>
+          </div>
+        </div></a>
+        </div>
+        @endforeach
+      @else
+      <div class="picture">
+              <img src="/img/ALT 4.png" alt="noservice">
+          </div>
+          <div class="message text-center">
+              <h3 class="fw-bold">Belum ada layanan yang dibuat</h3>
+              <p>Buat dan atur layanan yang bisa diakses pelangganmu!</p>
+              <p>Klik button “Tambah Layanan” di atas kanan halaman ini</p>
+          </div>
+      @endif
+      <div class="devices-button">
+      <button><a class="button-link text-decoration-none text-light" aria-current="page" href="/article">Selengkapnya</a></button> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End : devices -->
   <!-- consultation -->
   <div class="consultation" id="consultation">
     <div class="container">
