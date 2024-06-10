@@ -49,7 +49,8 @@ class LowonganController extends Controller
         if(isset($_FILES["foto"]) && !empty($_FILES["foto"]["name"])){
             $file= $request->file('foto');
             $filename= date('YmdHi').$file->getClientOriginalName()[0];
-            $file->storeAs('lowongan', $filename, 'public');
+            $file->move('images/lowongan' , $filename);
+            $request['foto']= $filename;
             $post = new Lowongan([
                 'judul' => $validatedData['judul'],
                 'cabang_perusahaan' => $validatedData['cabang_perusahaan'],
