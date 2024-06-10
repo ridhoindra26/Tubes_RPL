@@ -9,7 +9,7 @@
             Tambah Layanan
         </a>
     </div>
-    <div class="catSort">
+    {{-- <div class="catSort">
         <button type="button" class="btn btn-primary btn-2">
             <ion-icon name="library"></ion-icon>
             Category
@@ -18,7 +18,7 @@
             <ion-icon name="funnel"></ion-icon>
             Sort by
         </button>
-    </div>
+    </div> --}}
     @if (isset($layanan) AND $layanan->count()>0)
     <div class="card-list">
             @foreach ($layanan as $item)
@@ -58,23 +58,6 @@
                 </div>
             </div>
             @endforeach
-    </div>
-    <div class="pagination">
-        <nav aria-label="...">
-            <ul class="pagination">
-                <li class="page-item disabled">
-                    <a class="page-link">Previous</a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item" aria-current="page">
-                    <a class="page-link" href="#">2</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                </li>
-            </ul>
-        </nav>     
     </div>
         @else
     <div class="katalog">

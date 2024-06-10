@@ -24,7 +24,7 @@
             @foreach ($artikel as $item)
             <div class="card" style="width: 18rem;">
                 @if ($item->foto)
-                    <img src="{{ url('images/artikel/'.$item->foto) }}"style="height: auto; width: auto;">
+                    <img src="{{ url('images/artikel/'.$item->foto) }}" style="height: 300px; object-fit: cover">
                 @endif
                 <div class="card-body">
                     <h4>{{$item->judul}}</h4>
