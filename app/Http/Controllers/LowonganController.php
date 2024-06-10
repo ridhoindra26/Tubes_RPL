@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -84,7 +86,8 @@ class LowonganController extends Controller
         if(isset($_FILES["foto"]) && !empty($_FILES["foto"]["name"])){
             $file= $request->file('foto');
             $filename= date('YmdHi').$file->getClientOriginalName()[0];
-            $file->storeAs('lowongan', $filename, 'public');
+            $file->move('images/lowongan' , $filename);
+            $request['foto']= $filename;
             Lowongan::where('id_lowongan', '=', $id)->update([
                 'foto' => $filename
             ]);
